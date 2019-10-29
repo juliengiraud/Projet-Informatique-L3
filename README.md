@@ -44,3 +44,19 @@ ax = sns.heatmap(W)
 ```
 
 Et si on utilise ce code pour visualiser les ingrédients on verra qu'ils ont des couleurs semblables aux couleurs de leurs cuisines
+
+## Note importante
+
+Dans notre apprentissage nous utilisons l'occurence des ingrédients dans les cuisines, ce qui veut dire qu'un ingrédients utilisé dans beaucoup de plats sur un type de cuisine aura un poids très fort. Le problème c'est que nous n'avons pas le même nombre de plats par type de cuisine ! Ce qui biaise la façon d'interpréter ces données d'occurence. Il faudrait essayer de diviser la valeur d'occurence par le nombre de plats qui contiennent l'ingrédient (ou par le nombre de plats du type de cuisine peut-être ?)
+Ou disons que chaque ingrédient a un poid de 1000 au départ, on divise ce 1000 par le nombre d'utilisation de l'ingrédient ce qui donne son nouveau poids, et au final on multiplie les occurence de l'ingrédient par ce poids
+Sinon on calcul pour chaque type de cuisine le pourcentage de recettes qui utilise chaque ingrédient et on multiplie son occurence par cette valeur
+
+### Normalisation
+
+Ok en fait il faut normaliser notre façon de compter. Déjà il faut rendre équitable le nombre de recettes par type de cuisine (1), ensuite il faut rendre équitable l'utilisation des ingrédients dans les recettes (2) et enfin il faut prendre en compte la proportion d'utilisation des ingrédients dans un type de cuisine, c'est à dire que plus il y a d'ingrédients différents moins ils sont importants (3)
+
+1. Si un type A de cuisine a 2 fois plus de recettes qu'un type B, il faudrait multiplier toutes les occurences du type B par 2 : compter combien de recettes possède chaque cuisine, prendre le max et pour chaque cuisine multiplier les occurences par nb_de_recettes_de_la_cuisine/max
+
+2. Lors du compte des occurences on ajoute 1 à chaque fois, il faut ajouter 1 / le nombre d'ingrédient de la recette
+
+3. Pour chaque ingrédients il faut prendre en compte sa proportion dans chaque type de cuisine : pour chaque type de cuisine, multiplier l'occurence de chaque ingrédient par (son occurence dans le type de cuisine / somme des occurences d'ingrédients du type de cuisine)
