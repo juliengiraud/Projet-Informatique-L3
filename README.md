@@ -60,3 +60,13 @@ Ok en fait il faut normaliser notre façon de compter. Déjà il faut rendre éq
 2. Lors du compte des occurences on ajoute 1 à chaque fois, il faut ajouter 1 / le nombre d'ingrédient de la recette
 
 3. Pour chaque ingrédients il faut prendre en compte sa proportion dans chaque type de cuisine : pour chaque type de cuisine, multiplier l'occurence de chaque ingrédient par (son occurence dans le type de cuisine / somme des occurences d'ingrédients du type de cuisine)
+
+## MAJ du 22/11/2019
+
+Il faut vérifier les données sources, problème de taille de matrice.
+
+On peut utiliser notre model NMF pour obtenir les valeurs d'un nouveau plat (model.transform([valeurs...])).
+
+Est-ce qu'on peut obtenir les coordonnées d'un nouveau plat à la volée ?
+
+On peut enregistrer notre model dans un fichier avec la librairie pickle et donc générer un point en direct à partir d'une nouvelle recette à la soutenance.
