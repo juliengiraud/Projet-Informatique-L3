@@ -1,5 +1,7 @@
 # What's cooking? - Code source
 
+Par **Julien GIRAUD** (P1704709) et **Melisya TUTOGLU** (P1702053)
+
 Ce projet est basé sur le défit [What's cooking?](https://www.kaggle.com/c/whats-cooking/) de Kaggle. Notre objectif était de pouvoir entrer une nouvelle recette de cuisine et obtenir son pays d'origine, tout en visualisant où elle se situe par rapport aux autres recettes.
 
 ![Exemple de carte](Cartes/Carte_normale.png)
