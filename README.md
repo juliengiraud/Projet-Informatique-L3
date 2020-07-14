@@ -7,6 +7,11 @@ Ce projet est basé sur le défit [What's cooking?](https://www.kaggle.com/c/wha
 ![Exemple de carte](Cartes/Carte_normale.png)
 ![Exemple de carte avec une nouvelle recette](Cartes/Carte_avec_un_nouveau_plat.png)
 
+Vous pouvez directement visionner les cartes interactives avec les liens suivants :
+
+- [Carte normale](https://juliengiraud.github.io/Projet-Informatique-L3/Cartes/Carte_normale.html)
+- [Carte avec un nouveau plat](https://juliengiraud.github.io/Projet-Informatique-L3/Cartes/Carte_avec_un_nouveau_plat.html)
+
 ## Installation et exécution du code
 
 Pour tester le projet il suffit d'ouvrir le [fichier de démonstration](Soutenance.ipynb) avec Jupyter Notebook, tout en ayant [notre archive](whats-cooking-data.zip) dans le même répertoire. En cas de problème de dépendances/version il faut se connecter sur [Kaggle](https://www.kaggle.com/) et importer ces deux fichiers pour les lancer en ligne.  
